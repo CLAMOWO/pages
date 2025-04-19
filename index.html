@@ -1,49 +1,139 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>Puresys系统下载站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puresys系统下载站 - 纯净系统镜像</title>
     <style>
-        .container {
-            width: 60%;
-            margin: 10% auto 0;
-            background-color: #f0f0f0;
-            padding: 2% 5%;
-            border-radius: 10px
+        /* 基础样式 */
+        * { box-sizing: border-box; margin: 0; padding: 0 }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6 }
+
+        /* 导航栏 */
+        .navbar {
+            background: #66CCFF;
+            padding: 1rem;
+            position: sticky;
+            top: 0
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500
         }
 
-        ul {
-            padding-left: 20px;
+        /* 下载分类网格 */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem
+        }
+        .version-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s
+        }
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1)
         }
 
-            ul li {
-                line-height: 2.3
-            }
-
-        a {
-            color: #0000ff
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links { flex-direction: column }
+            .download-grid { grid-template-columns: 1fr }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Puresys系统下载站</h1>
-        <ul>
-            <li>————————————</li>
-            <li><a href="7.html">Windows 7 纯净版</a></li>
-            <li>————————————</li>
-            <li><a href="10.html">Windows 10 22H2 纯净版</a></li>
-            <li><a href="ltsc.html">Windows 10 LTSC2021 纯净版</a></li>
-            <li>————————————</li>
-            <li><a href="23h2.html">Windows 11 23H2 纯净版</a></li>
-            <li><a href="11.html">Windows 11 24H2 纯净版</a></li>
-            <li><a href="ltsc2024.html">Windows 11 LTSC2024 纯净版</a></li>
-            <li>————————————</li>
-            <li><a href="pe.html">推荐装机PE</a></li>
-            <li><a href="act.html">激活工具</a></li>
-            <li><a href="https://www.puresys.net/%e7%b3%bb%e7%bb%9f%e4%b8%8b%e8%bd%bd" target="_blank">更多系统》》</a></li>
-            <li>————————————</li>
-        </ul>
-    </div>
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#versions">系统版本</a></li>
+                <li><a href="#guide">其它工具</a></li>
+                <li><a href="#about">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="featured" class="download-grid">
+            <article class="version-card">
+                <h2><a href="7.html"target="_blank">Windows7 X64 纯净版</a></h2>
+                <p>版本：旗舰版 | 更新日期：2025-04</p>
+                <button onclick="location.href='https://110.40.170.171/dl/get_file_url.php?shareid=eZQDOuzj_odveXY0pPhPvDN_6'">本地下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/ty/win7/2025.4/Pure_Windows7_X64_2025.4.esd'">电信下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cu/win7/2025.4/Pure_Windows7_X64_2025.4.esd'">联通下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cm/win7/2025.4/Pure_Windows7_X64_2025.4.esd'">移动下载</button>
+            </article>
+        
+            <article class="version-card">
+                <h2><a href="10.html"target="_blank">Windows10 22H2 纯净版</a></h2>
+                <p>版本：专业版 | 更新日期：2025-04</p>
+                <button onclick="location.href='https://110.40.170.171/dl/get_file_url.php?shareid=eZQBBRQ7BK6ovZwZeHX8ltvjA'">本地下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/ty/22h2/2025.4/Pure_Windows10_22h2_X64_2025.4.esd'">电信下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cu/22h2/2025.4/Pure_Windows10_22h2_X64_2025.4.esd'">联通下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cm/22h2/2025.4/Pure_Windows10_22h2_X64_2025.4.esd'">移动下载</button>
+            </article>
+        
+            <article class="version-card">
+                <h2><a href="ltsc.html"target="_blank">Windows10 LTSC 纯净版</a></h2>
+                <p>版本：企业版LTSC | 更新日期：2025-04</p>
+                <button onclick="location.href='https://110.40.170.171/dl/get_file_url.php?shareid=eZQDvMkzS9ayy54QJXqw4UD4Q'">本地下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/ty/ltsc2021/2025.4/Pure_Windows10_ltsc2021_X64_2025.4.esd'">电信下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cu/ltsc2021/2025.4/Pure_Windows10_ltsc2021_X64_2025.4.esd'">联通下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cm/ltsc2021/2025.4/Pure_Windows10_ltsc2021_X64_2025.4.esd'">移动下载</button>
+            </article>
+        
+            <article class="version-card">
+                <h2><a href="23h2.html"target="_blank">Windows11 23H2 纯净版</a></h2>
+                <p>版本：专业版 | 更新日期：2025-04</p>
+                <button onclick="location.href='https://110.40.170.171/dl/get_file_url.php?shareid=eZQCmzUcraun9nrtbtJk9tYo-'">本地下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/ty/11/2025.4/Pure_Windows11_23h2_X64_2025.4.esd'">电信下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cu/11/2025.4/Pure_Windows11_23h2_X64_2025.4.esd'">联通下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cm/11/2025.4/Pure_Windows11_23h2_X64_2025.4.esd'">移动下载</button>
+            </article>
+        
+            <article class="version-card">
+                <h2><a href="11.html"target="_blank">Windows11 24H2 纯净版</a></h2>
+                <p>版本：专业版 | 更新日期：2025-04</p>
+                <button onclick="location.href='https://110.40.170.171/dl/get_file_url.php?shareid=eZQC63g-GOzhgbanrno254MhW'">本地下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/ty/11/2025.4/Pure_Windows11_24h2_X64_2025.4.esd'">电信下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cu/11/2025.4/Pure_Windows11_24h2_X64_2025.4.esd'">联通下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cm/11/2025.4/Pure_Windows11_24h2_X64_2025.4.esd'">移动下载</button>
+            </article>
+        
+            <article class="version-card">
+                <h2><a href="ltsc2024.html"target="_blank">Windows11 LTSC 纯净版</a></h2>
+                <p>版本：企业版LTSC | 更新日期：2025-04</p>
+                <button onclick="location.href='https://110.40.170.171/dl/get_file_url.php?shareid=eZQA-iz3wnBfs-JTmdpdhrfQH'">本地下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/ty/ltsc2024/Pure_Windows11_ltsc2024_X64_2025.4.esd'">电信下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cu/ltsc2024/Pure_Windows11_ltsc2024_X64_2025.4.esd'">联通下载</button>
+                <button onclick="location.href='https://124.222.121.65/d/cm/ltsc2024/Pure_Windows11_ltsc2024_X64_2025.4.esd'">移动下载</button>
+            </article>
+        </section>
+    </main>
+
+        <section id="guide" style="padding: 2rem">
+            <h2>其它工具</h2>
+            <ul>
+                <li><a href="pe.html"target="_blank">推荐装机PE</a></li>
+                <li><a href="act.html"target="_blank">激活工具</a></li>
+                <li><a href="https://www.puresys.net/%e7%b3%bb%e7%bb%9f%e4%b8%8b%e8%bd%bd" target="_blank">更多系统》》</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer style="background: #f5f5f5; padding: 1.5rem; text-align: center">
+        <p>© 2020-2025   Puresys纯净系统-软件下载 | 邮箱：admin@puresys.net </p>
+    </footer>
 </body>
 </html>
